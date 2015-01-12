@@ -1,0 +1,406 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta http-equiv="Content-Language" content="it">
+<style type="text/css">
+body {
+        font-family: Arial; font-size: 13px; color: #000000; background-color: rgb(255, 255, 255);
+}
+.btn {
+  background: #34d947;  background-image: -webkit-linear-gradient(top, #34d947, #76b82b);  background-image: -moz-linear-gradient(top, #34d947, #76b82b);
+  background-image: -ms-linear-gradient(top, #34d947, #76b82b);  background-image: -o-linear-gradient(top, #34d947, #76b82b);  background-image: linear-gradient(to bottom, #34d947, #76b82b);
+  -webkit-border-radius: 10;  -moz-border-radius: 10;  font-family: Arial;  color: #ffffff;  font-size: 19px;  padding: 5px 10px 5px 10px;  text-decoration: none; outline: none;
+}
+.btnYellow {
+  background: #eeee11;  background-image: -webkit-linear-gradient(top, #eeee11, #cdcd20);  background-image: -moz-linear-gradient(top, #eeee11, #cdcd20);
+  background-image: -ms-linear-gradient(top, #eeee11, #cdcd20);  background-image: -o-linear-gradient(top, #eeee11, #cdcd20);  background-image: linear-gradient(to bottom, #eeee11, #cdcd20);
+  -webkit-border-radius: 10;  -moz-border-radius: 10;  font-family: Arial;  color: #ffffff;  font-size: 19px;  padding: 5px 10px 5px 10px;  text-decoration: none; outline: none;
+}
+.btnBlue {
+  background: #34b2d9;  background-image: -webkit-linear-gradient(top, #34b2d9, #2c93b8);  background-image: -moz-linear-gradient(top, #34b2d9, #2c93b8);
+  background-image: -ms-linear-gradient(top, #34b2d9, #2c93b8);  background-image: -o-linear-gradient(top, #34b2d9, #2c93b8);  background-image: linear-gradient(to bottom, #34b2d9, #2c93b8);
+  -webkit-border-radius: 10;  -moz-border-radius: 10;  font-family: Arial;  color: #ffffff;  font-size: 19px;  padding: 5px 9px 5px 10px;  text-decoration: none; outline: none;
+}
+.btnGray {
+  background: #777777;  background-image: -webkit-linear-gradient(top, #777777, #666666);  background-image: -moz-linear-gradient(top, #777777, #666666);
+  background-image: -ms-linear-gradient(top, #777777, #666666);  background-image: -o-linear-gradient(top, #777777, #666666);  background-image: linear-gradient(to bottom, #777777, #666666);
+  -webkit-border-radius: 10;  -moz-border-radius: 10;  font-family: Arial;  color: #ffffff;  font-size: 19px;  padding: 5px 10px 5px 10px;  text-decoration: none; outline: none;
+}
+.btn:hover {
+  background: #0f3600;  background-image: -webkit-linear-gradient(top, #0f3600, #3e8a12);  background-image: -moz-linear-gradient(top, #0f3600, #3e8a12);
+  background-image: -ms-linear-gradient(top, #0f3600, #3e8a12);  background-image: -o-linear-gradient(top, #0f3600, #3e8a12);  background-image: linear-gradient(to bottom, #0f3600, #3e8a12);
+  text-decoration: none; outline: none;
+}
+.btnYellow:hover {
+  background: #aaab34;  background-image: -webkit-linear-gradient(top, #aaab34, #898900);  background-image: -moz-linear-gradient(top, #aaab34, #898900);
+  background-image: -ms-linear-gradient(top, #aaab34, #898900);  background-image: -o-linear-gradient(top, #aaab34, #898900);  background-image: linear-gradient(to bottom, #aaab34, #898900);
+  text-decoration: none; outline: none;
+}
+.btnBlue:hover {
+  background: #0055aa;  background-image: -webkit-linear-gradient(top, #0055aa, #004477);  background-image: -moz-linear-gradient(top, #0055aa, #004477);
+  background-image: -ms-linear-gradient(top, #0055aa, #004477);  background-image: -o-linear-gradient(top, #0055aa, #004477);  background-image: linear-gradient(to bottom, #0055aa, #004477);
+  text-decoration: none; outline: none;
+}
+.btnGray:hover {
+  background: #222222;  background-image: -webkit-linear-gradient(top, #222222, #121212);  background-image: -moz-linear-gradient(top, #222222, #121212);
+  background-image: -ms-linear-gradient(top, #222222, #121212);  background-image: -o-linear-gradient(top, #222222, #121212);  background-image: linear-gradient(to bottom, #222222, #121212);
+  text-decoration: none; outline: none;
+}
+.header {font-family: Arial; font-size: 42px; color: #000000; background-color: rgb(255, 255, 255); font-weight: bold}
+.spec{font-family: Courier New; font-size: 16px; color: #000000; background-color: rgb(255, 255, 255)}
+.g{color: #00C436;text-shadow: 1px 1px #efefef;} /* 00CE2D on signs */
+.y{color: #FFC603;text-shadow: 1px 1px #efefef;} /* FFA500 on signs */
+.r{color: #CA210E;text-shadow: 1px 1px #efefef;} /* FF2100 on signs */
+.x{color: #BFBFBF;text-shadow: 1px 1px #efefef;}
+.s{color: #EBD02F;text-shadow: 1px 1px #efefef;}
+.ws{color: #FFFFFF} /* Whitespace */
+a:link { color: #ffff66 }
+link { color: #ffff00 }
+v:link { color: #3366ff }
+</style>
+<script>
+	var names = ["Public Test",
+                     "A01", "A02", "A03", "A04", "A05", "A06", "A07", "A08",
+                     "B01", "B02", "B03", "B04", "B05", "B06", "B07", "B08",
+                     "C01", "C02", "C03", "C04", "C05", "C06", "C07", "C08", "Help", "The Tower"]
+	var helpmenu = ["Information", "Notation", "Extras"]
+	String.prototype.replaceAll = function(str1, str2, ignore) 
+	{
+		return this.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g,"\\$&"),(ignore?"gi":"g")),(typeof(str2)=="string")?str2.replace(/\$/g,"$$$$"):str2);
+	}
+
+        function n1(title, color, star) { // Title is the title, color is the color and star is optional (if star is -1, display resource pooling, if star is color, use its syntax)
+		// Setup Subroutine
+		var end1 = "<b><a class='"; // Conveniently resets the end result, but for the source-code reading user, it's difficult to read
+		// Difficulty, Title, and Wrapper Subroutine
+		color = color.toLowerCase()
+		if (color == "grey" || color == "gray") {
+			color = "x"
+		}
+		if (color.toLowerCase().charAt(0) != 's') {
+			end1 = end1 + color.charAt(0) + "'>" + title + "</a></b>"
+			// example: Feed in 'gray' and get 'x' here, or feed in 'garbage' and get 'g'
+		} else {
+			if (star == 0) {
+				end1 = "<b><a class='s'>Resource Pooling</a></b>"
+			} else {
+				end1 = "<b><a class='s'>The</a><a class='" + star + "'>" + title + "</a><a class='s'>Star</a></b>"
+			}
+		}
+		return end1
+	}
+
+	function n2(diff, max, restrictions) { // This is separated into parts since I don't know how to merge them into one without more pointless arguments - you'll just have to repeat this function
+		// Setup Subroutine
+		var end2 = "<br><i>" + diff + "/" + max + "</i>: "
+		// Assume you have the back of end1 behind this one, say <b><a class='g'>Title</a></b>. Now add a break, italic, difficulty, max, restrictions, and funnel restrictions
+		var restr = restrictions.replaceAll("!", "✘")
+		restr = restr.replaceAll("X", "✘")
+
+		restr = restr.replaceAll("P", "Platform")
+		restr = restr.replaceAll("Receiver", "^")
+		restr = restr.replaceAll("R", "Recorder")
+		restr = restr.replaceAll("^", "Receiver")
+		restr = restr.replaceAll("Jam", "^")
+		restr = restr.replaceAll("J", "Jammer")
+		restr = restr.replaceAll("^", "Jam")
+		restr = restr.replaceAll("Connections", "^")
+		restr = restr.replaceAll("C", "Connector")
+		restr = restr.replaceAll("^", "Connections")
+		restr = restr.replaceAll("H", "Hexahedron")
+		restr = restr.replaceAll("F", "Fan")
+		restr = restr.replaceAll("L", "Ladder")
+		restr = restr.replaceAll("K", "Key")
+		restr = restr.replaceAll("Stack", "^")
+		restr = restr.replaceAll("Source", "/")
+		restr = restr.replaceAll("Solo", "&")
+		restr = restr.replaceAll("S", "Switch")
+		restr = restr.replaceAll("/", "Source")
+		restr = restr.replaceAll("^", "Stack")
+		restr = restr.replaceAll("&", "Solo")
+		restr = restr.replaceAll("1", "<a class='spec'>➊</a>")
+		restr = restr.replaceAll("2", "<a class='spec'>➋</a>")
+		restr = restr.replaceAll("3", "<a class='spec'>➌</a>")
+		restr = restr.replaceAll("4", "<a class='spec'>➍</a>")
+		restr = restr.replaceAll("5", "<a class='spec'>➎</a>")
+		restr = restr.replaceAll("6", "<a class='spec'>➏</a>")
+		restr = restr.replaceAll("7", "<a class='spec'>➐</a>")
+		restr = restr.replaceAll("8", "<a class='spec'>➑</a>")
+		restr = restr.replaceAll("9", "<a class='spec'>➒</a>")
+		return end2 + restr // <b><a class='g'>Title</a></b> + <br><i>3/5</i>: + <a class='spec'>➐</a>Connector
+	}
+
+
+	var a01 = [n1("A Switch Out Of Reach", "g") + n2(1, 4, "!S"),
+                             n1("Outnumbered", "g") + n2(2, 4, "!J"),
+                n1("Striding the Beaten Path", "g") + n2(1, 4, "!J"),
+                      n1("Only the Two of Us", "g") + n2(2, 4, "1J"),
+                  n1("Poking a Sleeping Lion", "g") + n2(1, 4, "1its J") + n2(4, 4, "!J"),
+                                n1("Peephole", "y") + n2(1, 4, "!J"),
+                        n1("Trio Bombasticus", "y") + n2(2, 4, "!J"),
+                         "<br>" + n1(" ", "s", "y") + n2(2, 4, "!J")]
+
+	var a02 = [n1("Hall of Windows", "g") + n2(2, 2, "!J"),
+          n1("The Guards Must Be Crazy", "g") + n2(1, 2, "!J"),
+                   n1("Suicide Mission", "y"),
+                   "<br>" + n1(" ", "s", "y") + n2(1, 2, "1J") + n2(2, 2, "!K")]
+
+	var a03 = [n1("Stashed for Later", "g") + n2(1, 3, "!S") + n2(3, 3, "!J"),
+     n1("Locked Me Up, Swallowed the Key", "y") + n2(1, 3, "!J"),
+                       n1("A Bit Tied Up", "y") + n2(2, 3, "!J"),
+               n1("An Escalating Problem", "r"),
+       "<br>" + n1(" A Bit Tied Up ", "s", "y") + n2(3, 3, "1J")]
+
+	var a04 = [n1("Push it Further", "y") + n2(1, 2, "1its C"),
+                     n1("Branch it Out", "y") + n2(1, 2, "!C"),
+          n1("Don't Cross the Streams!", "y"),
+                 n1("Above All That...", "y") + n2(1, 2, "!C"),
+                   "<br>" + n1(" ", "s", "y") + n2(2, 2, "1its C !Treeceiver")]
+
+	var a05 = [n1("Things To Do With Two Boxes", "g") + n2(1, 6, "1H") + n2(4, 6, "!C 1its H") + n2(5, 6, "!C 1H"),
+                             n1("One Little Buzzer", "g") + n2(3, 6, "!J !C 1H") + n2(5, 6, "!C"),
+                          n1("Going Over The Fence", "g") + n2(2, 6, "!C") + n2(2, 6, "!C !its H"),
+        n1("You Know You Mustn't Cross the Streams", "g") + n2(1, 6, "1C") + n2(2, 6, "!C"),
+                            n1("Friendly Crossfire", "r") + n2(4, 6, "!J"),
+   "<br>" + n1(" Things To Do With Two Boxes ", "s", "g") + n2(4, 6, "!C"),
+                     n1(" Friendly Crossfire ", "s", "r") + n2(3, 6, "!J"),
+                                             n1("","s",0) + n2(6, 6, "1J 4C 4H")]
+
+	var a06 = [n1("Mobile Mindfield", "g"),
+                     n1("A Door Too Far", "r") + n2(1, 1, "1C"),
+           n1("Bichromatic Entanglement", "r"),
+                          n1("Deception", "r") + n2(1, 1, "!J 2its C !H !F")]
+
+	var a07 = [n1("Locked from Inside", "g"),
+                       n1("Trapped Inside", "g"),
+                      n1("Pinhole Windows", "r"),
+             n1("Two Pesky Little Buzzers", "r") + n2(1, 1, "1C"),
+             n1("Windows into a Labyrinth", "r"),
+                      "<br>" + n1(" ", "s", "r") + n2(1, 1, "1C"),
+                                 n1(" ", "s", 0) + n2(1, 1, "1C")]
+
+	var a08 = [n1("Dumb Dumb Mine", "x"),
+                    n1("Nerve-Wrecker", "x"),
+               n1("Jammed from Inside", "x")]
+
+	var b01 = [n1("Window through a Door", "y"),
+                  n1("Something about a Star", "y"),
+                             n1("Third Wheel", "y") + n2(1, 2, "1C") + n2(2, 2, "!J !C !H !F"),
+                          n1("Over the Fence", "y") + n2(1, 2, "!its J"),
+                           n1("Road of Death", "y") + n2(1, 2, "!Stack on Bomb") + n2(2, 2, "!J !C !H !F") + n2(2, 2, "!L"),
+                                    n1(" ", "s", 0) + n2(2, 2, "1J")]
+
+	var b02 = [n1("Moonshot", "y"),
+            n1("Man on the Moon", "y") + n2(1, 2, "1H 1F"),
+                   n1("The Tomb", "y"),
+              n1("Higher Ground", "r") + n2(1, 2, "!J") + n2(2, 2, "!J !C !H")]
+
+	var b03 = [n1("Sunshot", "y"),
+                n1("Blown Away", "y"),
+              n1("Eagle's Nest", "y") + n2(2, 3, "!L"),
+                   n1("Whoosh!", "r") + n2(1, 3, "1F") + n2(3, 3, "!C !H !F"),
+           "<br>" + n1(" ", "s", "g") + n2(2, 3, "1C 1H")]
+
+	var b04 = [n1("Self-Help Tutorial", "g"),
+                         n1("Double Plate", "g"),
+               n1("Wrap Around the Corner", "r"),
+               n1("Redundant Power Supply", "r"),
+                        n1("A Box Up High", "r"),
+                      n1("The Right Angle", "r")]
+
+	var b05 = [n1("Slightly Elevated Sigil", "g") + n2(1, 4, "1C"),
+            n1("Me, Myself and Our Two Jammers", "r") + n2(3, 4, "!its R")  + n2(4, 4, "!its J !its R"),
+               n1("The Four Chambers Of Flying", "r") + n2(1, 4, "!J on H") + n2(2, 4, "!C") + n2(2, 4, "!its J") + n2(2, 4, "!H"),
+                   n1("Behind the Iron Curtain", "r") + n2(2, 4, "!L"),
+              n1("Alley of the Pressure Plates", "r") + n2(2, 4, "!final Receiver")]
+
+	var b06 = [n1("Crisscross Conundrum", "y") + n2(1, 1, "!J !C !H !F"),
+                 n1("Just Doors and Windows", "y"),
+                        n1("Egyptian Arcade", "r")]
+
+	var b07 = [n1("Bouncing Side by Side", "y") + n2(2, 2, "1C"),
+                        n1("Big Lump of Mine", "y") + n2(2, 2, "!Stack on Bomb"),
+                    n1("A Fan across Forever", "r") + n2(1, 2, "!C"),
+                     n1("Whole Lotta Jamming", "r") + n2(2, 2, "2its J"),
+   "<br>" + n1(" Bouncing Side by Side ", "s", "y") + n2(2, 2, "1C")]
+
+	var b08 = [n1("Peekaboo!", "x") + n2(1, 1, "!its Source"),
+             n1("Merry Go 'Round", "x"),
+                n1("Cat's Cradle", "x")]
+
+	var c01 =     [n1("Blowback", "r") + n2(1, 4, "!H") + n2(2, 4, "!F") + n2(3, 4, "!H !F"),
+                      n1("Labyrinth", "r") + n2(2, 4, "!K !H") + n2(3, 4, "!K !J") + n2(3, 4, "!J !C !H !F"),
+               n1("The Conservatory", "r") + n2(1, 4, "2C") + n2(3, 4, "!C"),
+  n1("Multiply Impossible Ascension", "r") + n2(3, 4, "!C") + n2(4, 4, "!H") + n2(4, 4, "!F"),
+                "<br>" + n1(" ", "s", "y") + n2(1, 4, "1C !H") + n2(2, 4, "!J !C !H !F")]
+
+	var c02 = [n1("Cemetery", "r") + n2(1, 2, "!C") + n2(2, 2, "!C !H"),
+             n1("The Short Wall", "r") + n2(1, 2, "!R"),
+                   n1("Rapunzel", "r") + n2(2, 2, "!R"),
+        n1("A Ditch and a Fence", "r") + n2(2, 2, "!R")]
+
+	var c03 = [n1("Three Little Connectors... and a Fan", "r"),
+                                      n1("Jammer Quarantine", "r"),
+                                             n1("Weathertop", "r") + n2(1, 2, "1C"),
+                              n1("Big Stairs, Little Stairs", "r") + n2(1, 2, "3H"),
+                                        "<br>" + n1(" ", "s", "y") + n2(1, 2, "2C") + n2(2, 2, "1C")]
+
+	var c04 = [n1("Stables", "r"),
+                    n1("Armory", "r") + n2(3, 5, "!its J !its C !its H !its F"),
+               n1("Throne Room", "r") + n2(2, 5, "1C") + n2(3, 3, "!C"),
+                 n1("Oubliette", "r") + n2(1, 5, "!R !P") + n2(2, 3, "!R !H"),
+            n1(" Oubliette ","s","r") + n2(4, 5, "!P") + n2(5, 5, "3C !P")]
+
+	var c05 = [n1("Time Crawls", "r") + n2(1, 3, "!R"),
+                    n1("Time Flies", "r") + n2(1, 3, "!R"),
+           n1("Up Close and Jammed", "r") + n2(2, 3, "!J"),
+                    n1("Dumbwaiter", "r") + n2(1, 3, "1H"),
+    "<br>" + n1(" Time Flies ", "s", "r") + n2(1, 3, "!R"),
+    n1(" Up Close and Jammed ", "s", "r") + n2(2, 3, "!Stack on Bomb"),
+             n1(" Dumbwaiter ", "s", "r") + n2(2, 3, "1C"),
+                             n1("","s",0) + n2(2, 3, "1J 3C 2H 1F") + n2(3, 3, "1J 5C 4H 2F")]
+
+	var c06 = [n1("Two Way Street", "r"),
+     n1("The Seven Doors of Recording", "r"),
+                   n1("Circumlocution", "r")]
+
+	var c07 = [n1("Prison Break", "r") + n2(1, 3, "1C") + n2(3, 3, "!C"),
+              n1("Dead Man's Switch", "r") + n2(2, 3, "!its J !its C !its H !its F"),
+                n1("Carrier Pigeons", "r"),
+  n1("Crisscross Conundrum Advanced", "r") + n2(2, 3, "!its J !its C !its H !its F")]
+
+	var c08 = [n1("Nexus", "x"),
+                  n1("Cobweb", "x"),
+      n1("Unreachable Garden", "x") + n2(1, 1, "!P")]
+
+	var dmo = [n1("Exactly Two Jammers", "g") + n2(2, 5, "!J"),
+                 n1("Two Colors, Two Doors", "g") + n2(3, 5, "!C"),
+               n1("Imprisoned Power Source", "g") + n2(3, 5, "!J !C"),
+                            n1("Propylaeum", "z") + n2(3, 5, "1C !F") + n2(4, 5, "!H !F"),
+               n1("The Secret of Recording", "x"),
+                       "<br>" + n1(" ", "s", "y") + n2(1, 5, "!C !J") + n2(2, 5, "!C !H"),
+                                     n1("","s",0) + n2(5, 5, "3J 4C 1H")]
+
+	var tow = [n1("Floor 1", "z") + n2(1, 2, "!J"),
+                   n1("Floor 2", "z"),
+                   n1("Floor 3", "z"),
+                   n1("Floor 4", "z") + n2(1, 2, "!R !P"),
+                   n1("Floor 5", "z") + n2(1, 2, "1R"),
+                   n1("The Top", "z") + n2(2, 2, "Solo")]
+
+	var inf = ["<button id='inf' class='btnGray' onclick='metagen(inf,0)'>Information</button> <button id='not' class='btnGray' onclick='metagen(not,1)'>Notation</button> <button id='ext' class='btnGray' onclick='metagen(ext,2)'>Extras</button>",
+                   "<br><a class='header'>Information</a>",
+                   "This is a fanmade challenge list for <i>The Talos Principle</i> compiled by main_gi.<br>Many of the challenges were inspirations, but several of them are original.",
+                   "However, it would be fallacious to conclude that every challenge is from my own finding."]
+
+	var not = ["<button id='inf' class='btnGray' onclick='metagen(inf,0)'>Information</button> <button id='not' class='btnGray' onclick='metagen(not,1)'>Notation</button> <button id='ext' class='btnGray' onclick='metagen(ext,2)'>Extras</button>",
+                   "<br><a class='header'>Notation</a>",
+                   "Numbers, such as <i>5/5</i> define the self-contained",
+                   "difficulty of the challenges inside the world. This means",
+                   "a <i>5/5</i> in one puzzle set is most likely not equal to",
+                   "another <i>9/9</i> or even another <i>5/5</i>.",
+                   "Note that the use of ✘ <i>restricts</i> items' use, though",
+                   "things can get potentially more specific depending on their use.",
+                   "For example, ✘Jammer means that doing anything with or to Jammer",
+                   "is prohibited, though if the Jammer starts off already Jamming",
+                   "or worse, already moving, it cannot be interacted with, but can still",
+                   "continue its actions. More specific things, like ✘Jam, may not mean",
+                   "the same thing. This restriction can also get more specific, in the",
+                   "example of, say, <a class='spec'>➋</a>Connector, which lets the player pick up two Connectors",
+                   "with the same restrictions. There is also the \"its\" distinction, in which",
+                   "if the restrictions say ✘its Connector, it differs from just ✘Connector",
+                   "in that only Connectors in that level can't be used. This can be combined",
+                   "with numerical notation. Additionally, for unquantifiable values, like",
+                   "<a class='spec'>➋</a>its Recorder or <a class='spec'>➋</a>Platform, it is redefined to mean the amount of uses",
+                   "that item has. By the way - \"Resource Pooling\" defines bringing the",
+                   "amount of items described into the main area together."]
+
+        var ext = ["<button id='inf' class='btnGray' onclick='metagen(inf,0)'>Information</button> <button id='not' class='btnGray' onclick='metagen(not,1)'>Notation</button> <button id='ext' class='btnGray' onclick='metagen(ext,2)'>Extras</button>",
+                   "<br><a class='header'>Extras</a>",
+                   "✘Jam - Jammer cannot be used to jam barriers, but can still be used for pressure plates.",
+                   "✘Key - Key cannot be picked up.",
+                   "✘Switch - Cannot turn on/off specified switches.",
+                   "✘Ladder - Ladders cannot be climbed.",
+                   "✘Connections - Connector cannot be used to connect lasers, but can still be used for pressure plates.",
+                   "✘Source - Specified power sources cannot be used.",
+                   "✘Receiver - Specified power receivers cannot be used.",
+                   "✘Stack - Hexahedron cannot be used to be placed on other Hexahedrons or on Bombs, nor shall you place items on it.",
+                   "✘Stack on Item - Items cannot be placed on Items.",
+                   "✘Stack on Bomb - Hexahedron cannot be placed on a Bomb.",
+                   "✘Power - Fan cannot be powered up, but can still be used for pressure plates or for standing on.",
+                   "Usually such specific restrictions are unnecessary as more generalized restrictions can usually be made."]
+
+	var hlp = ["<button id='inf' class='btnGray' onclick='metagen(inf,0)'>Information</button> <button id='not' class='btnGray' onclick='metagen(not,1)'>Notation</button> <button id='ext' class='btnGray' onclick='metagen(ext,2)'>Extras</button>"]
+
+	var z = "" // It's some string used in the next function
+	function getLength(x) { // "x" is an array name
+		z = ""; // Reset it...
+		if (x != not && x != ext && x != inf) {
+			for (y=0; y<x.length; y++) { // Starts at zero, for the array of course
+				z = z + x[y] + "<br><br>"
+			}
+		} else {
+			for (y=0; y<x.length; y++) { // Starts at zero, for the array of course
+				z = z + x[y] + "<br>"
+			}
+		}
+		return z
+	}
+	var backupCheck = -1;
+	function generate(x,y) {
+		if (backupCheck != y) {
+			backupCheck = y;
+			document.getElementById("generatedText").innerHTML = "<a class='header'>" + names[y] + "</a><br><br>" + getLength(x)
+		} else {
+			backupCheck = -1;
+			document.getElementById("generatedText").innerHTML = ""
+		}
+	}
+	function metagen(x,y) {
+		if (backupCheck != y) {
+			backupCheck = y;
+			document.getElementById("generatedText").innerHTML = "<a class='header'>Help</a><br><br>" + getLength(x)
+		} else {
+			backupCheck = -1;
+			document.getElementById("generatedText").innerHTML = "<a class='header'>Help</a><br><br><button id='inf' class='btnGray' onclick='metagen(inf,0)'>Information</button> <button id='not' class='btnGray' onclick='metagen(not,1)'>Notation</button> <button id='ext' class='btnGray' onclick='metagen(ext,2)'>Extras</button>"
+		}
+	}
+
+</script><style type="text/css"></style></head>
+<body><center>
+
+<a class="header">The Talos Principle Challenges<a><br><br>
+<a class="ws">______________________.</a>
+<button id="a01" class="btn" onclick="generate(a01,1)">A01</button> 
+<button id="a02" class="btn" onclick="generate(a02,2)">A02</button> 
+<button id="a03" class="btn" onclick="generate(a03,3)">A03</button> 
+<button id="a04" class="btn" onclick="generate(a04,4)">A04</button> 
+<button id="a05" class="btn" onclick="generate(a05,5)">A05</button> 
+<button id="a06" class="btn" onclick="generate(a06,6)">A06</button> 
+<button id="a07" class="btn" onclick="generate(a07,7)">A07</button> 
+<button id="a08" class="btn" onclick="generate(a08,8)">A08</button>
+<a class="ws">_____.</a>
+<button id="tow" class="btnGray" onclick="generate(tow,26)">The Tower</button><br><br>
+<a class="ws">______________________.</a>
+<button id="b01" class="btnYellow" onclick="generate(b01,9)">B01</button> 
+<button id="b02" class="btnYellow" onclick="generate(b02,10)">B02</button> 
+<button id="b03" class="btnYellow" onclick="generate(b03,11)">B03</button> 
+<button id="b04" class="btnYellow" onclick="generate(b04,12)">B04</button> 
+<button id="b05" class="btnYellow" onclick="generate(b05,13)">B05</button> 
+<button id="b06" class="btnYellow" onclick="generate(b06,14)">B06</button> 
+<button id="b07" class="btnYellow" onclick="generate(b07,15)">B07</button> 
+<button id="b08" class="btnYellow" onclick="generate(b08,16)">B08</button>
+<a class="ws">_____</a>
+<button id="dmo" class="btnGray" onclick="generate(dmo,0)">Public Test</button><br><br>
+<a class="ws">__________________.</a>
+<button id="c01" class="btnBlue" onclick="generate(c01,17)">C01</button> 
+<button id="c02" class="btnBlue" onclick="generate(c02,18)">C02</button> 
+<button id="c03" class="btnBlue" onclick="generate(c03,19)">C03</button> 
+<button id="c04" class="btnBlue" onclick="generate(c04,20)">C04</button> 
+<button id="c05" class="btnBlue" onclick="generate(c05,21)">C05</button> 
+<button id="c06" class="btnBlue" onclick="generate(c06,22)">C06</button> 
+<button id="c07" class="btnBlue" onclick="generate(c07,23)">C07</button> 
+<button id="c08" class="btnBlue" onclick="generate(c08,24)">C08</button>
+<a class="ws">_________</a>
+<button id="hlp" class="btnGray" onclick="generate(hlp,25)">Help</button><br><br>
+<p id="generatedText"></p>
+
+</center></body></html>
